@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            font-size: 25px;
+            text-align: center;
+            background-color: rgb(238, 205, 237);
+            width: 600px;
+            height: 100px;
+        }
+
+        .box:hover{
+            background-color: rgb(197, 234, 222);
+        }
+
+        .box:active::after {
+            content: "\A YOU ARE THE EMBODIMENT OF PERFECTION^^"; /* Use "\A" for a line break */
+            white-space: pre; /* Preserve white space */
+            color: rgb(58, 54, 3);
+            background-color: rgb(243, 243, 169);
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <img src="./testing/bun.jpg" alt="Bunny"
+    style="margin-left: 22px;"
+    width="550"
+    height="500">
+    
+    <div class="box">
+        Hi, Mr. Potato!
+    </div>
+</body>
+</html>
