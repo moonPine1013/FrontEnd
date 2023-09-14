@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            ::伪元素选择器
+            伪元素表示特殊的位置
+            用::开头
+
+            ::first-letter第一个字母
+            ::first-line表示第一行
+            ::selection选中的内容
+
+            ::before第一个字符之前，开头
+            ::after最后一个字符之后，结尾
+            before和after算是较为常用，可以用来无中生有创造空间
+        */
+        p::first-letter {
+            font-size: smaller;
+        }
+
+        div::before {
+            content: haha;
+            color: slateblue;
+        }
+
+        div::after {
+            content: haha;
+            color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        This is a character.
+    </p>
+    <div>
+        This is a dmeo.
+    </div>
+    
+</body>
+</html>
