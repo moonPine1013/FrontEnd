@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            /*step1: must define the set of three properties*/
+            width: 500px;
+            height: 500px;
+            background-color: hotpink;
+
+            /*step2: define the size of border properties*/
+            border-width: 10px; /*all 10px*/
+            
+            /*clock-wise order: top right bottom left */
+            /* if the size of left is undefined, html auto-sets its size as the right border (opposite border size)*/
+            border-width: 10px 20px 30px 40px;
+
+            /*step3: advanced style of border properties*/
+            border-color: aquamarine;
+            border-style: solid;
+
+            /*step4: united defination of border properties */
+            border: solid red 10px;
+            border: 1px gold dashed;
+            border-top: seagreen dotted 20px; /* order doesn't matter*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+</body>
+</html>
