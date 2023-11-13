@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .padding1{
+            background-color: lightcoral;
+            padding-top: 100px;
+            width: 100px;
+            height: 100px; /* the total height shown on the page becomes 100+100=200px*/
+
+        }
+        .padding2{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+
+    <style>
+        .margin1{ /*This is the first square box*/
+            width: 200px;
+            height: 200px;
+            background-color: mediumslateblue;
+
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+
+            /*100px set for all sides -> override the previously defined margin size*/
+            margin: 100px; 
+        }
+    </style>
+
+    <style>
+        .outer1{
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+            background-color: blue;
+            margin:50px;
+
+        }
+        .inner1{
+            width: 100px;
+            height: 200px;
+            background-color: darksalmon;
+            margin: auto;
+
+        }
+    </style>
+
+<style>
+    .outer2{
+        width: 200px;
+        height: 100px;
+        background-color: cadetblue;
+
+        /*
+            visible: default
+            hidden: 隐藏溢出内容
+            scroll: 滚轮 horizontal & vertical
+            overflow auto: 根据需要添加滚轮
+        */
+
+        overflow: auto;
+        overflow-x: visible;
+        overflow-y: scroll;
+        
+
+    }
+    .inner2{
+        width: 500px;
+        height: 50px;
+        background-color: brown;
+        
+    }
+</style>
+
+</head>
+<body>
+    <div class="padding1">
+
+    </div>
+    <div class="padding2">
+
+    </div>
+    <div class="margin1">
+
+    </div>
+    <div class="outer1">
+        <div class="inner1">
+
+        </div>
+    </div>
+    <div class="outer2">
+        <div class="inner2">
+
+        </div>
+    </div>
+</body>
+</html>
