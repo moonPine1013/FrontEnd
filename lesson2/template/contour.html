@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            /*actual text height = height - 2* (padding + border)*/
+            height: 100px;
+            background-color: rosybrown;
+            padding: 10px;
+
+            box-sizing: border-box; /*width and height are for setting the box's visible size*/
+            box-sizing: content-box;/*for setting the content size*/
+            border: 10px green solid;
+            /*
+                1st index: +-10px -> shadow lean to right / left
+                2dn index: +-10px -> shadow lean to bottom/ top
+                3rd index: shadow blurring radius
+            */
+            box-shadow: 10px 10px 30px red;
+        } 
+        .box1:hover{
+            outline: rgb(135, 250, 198) 10px solid; /* for mouse hoverring animation*/
+
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+ 
+            border-top-left-radius: 30px 60px;
+            
+            border-radius: 20px;/*1. From square to rounded-corner square*/
+            border-radius: 20px 100px; /*2.index order-> X shape start with top-left*/
+            border-radius: 10px 20px 30px 40px; /*3. clock-wise*/
+            border-radius: 10px/40px;/*4. width-radius/height-radius*/
+
+
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 50%; /*circle-> 50% of the width/height of the default square*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <br>
+    <div class="box2">
+    
+    </div>
+    <br>
+    <div class="box3">
+
+    </div>
+</body>
+</html>
