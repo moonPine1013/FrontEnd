@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color:aqua;
+
+            /*set up position*/
+            position: relative;
+            left: 200px;
+            bottom: 200px;
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+
+            /*most frequently used */
+            position: absolute;
+            left: 50px;
+            top: 100px;
+        }
+        .box11{
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            position: relative;
+        }
+        .box22{
+            width: 400px;
+            height: 400px;
+            background-color: orchid;
+            position: relative;
+        }
+        .box4{
+            width: 800px;
+            height: 300px;
+            background-color: palegoldenrod;
+
+            /*sticking with the scroll*/
+            position:sticky;
+            right: 0;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box4">4</div>
+    <div class="box1">1</div>
+    <div class ="box11">
+        11
+        <div class="box22">
+            22
+            <div class="box3">3</div>
+
+        </div>
+    </div>
+    <div class="box2">2</div>
+
+</body>
+</html>
