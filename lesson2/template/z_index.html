@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size:  50px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            /*must be a postion+z-index pair*/
+            position: absolute;
+            /*box with higher z-index display on the top layer*/
+            z-index: 3;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: #87cefa;
+            position: absolute;
+
+            top: 100px;
+            left: 100px;
+            z-index: -1;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            position: absolute;
+
+            top: 200px;
+            left: 200px;
+            z-index: 2;
+
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: cornsilk;
+
+            /* child box always display on top of the parent box regardless the value of the z-index*/
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        1
+    </div>
+    <div class="box2">
+        2
+    </div>
+    <div class="box3">
+        3
+        <div class="box4">4</div>
+
+    </div>
+</body>
+</html>
