@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 5000px; /*the whole size of the web page*/
+
+        }
+        .box1{
+            width: 1000px;
+            height: 1000px;
+            background-color: violet;
+            background-image: url(spring.webp);
+
+            /*repeat, repeat-x, repeat-y, norepeat*/
+            background-repeat: repeat;
+
+            /*top left bottom right center*/
+            /*horizontal, vertical 50px 300px*/
+            background-position: right, left;
+
+            border: red 10px double;
+            /*border-box, padding-box, content-box*/
+            background-clip: border-box;
+            /*padding-box, content-box, border-box*/
+            background-origin: padding-box;
+
+            /*
+                2-index:
+                    100px 100px   width height
+                    100% 100% 
+                    auto 100%   
+                
+                1-index
+                    cover    same ratio but cover up 
+                    cotain   same ratio show the orginal image
+
+            */
+            background-size: 200px 200px;
+
+            background-attachment: scroll;
+
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
