@@ -1,0 +1,113 @@
+flex布局->轴式布局，代替float浮动
+
+弹性容器，
+    display:flex;
+    display:inline-flex; 后面的元素不换行
+
+弹性容器的直接子元素，叫做弹性子元素
+    但是容器可以同是弹性容器，也是弹性元素
+
+
+
+<!--弹性容器-->
+display: flex;
+
+<!--容器样式-->
+
+    弹性方向：只管子元素，默认是row, 可以column还有row-reverse
+
+                row: 从左向右
+                row-reverse: 从右向左，第一个元素贴右边框
+                column: 从上向下
+                column-reverse: 从下向上
+
+    i.e    
+         flex-direction: row;
+
+
+<!--主轴，侧轴-->
+
+    弹性元素排列方向为主轴，
+    与主轴垂直就是侧轴
+
+    i.e  
+        flex-wrap:nowrap;  默认值，选择是否自动换行，沿着辅轴换行
+        flex-wrap: wrap-reverse; 元素沿着辅轴反方向换行
+
+<!--Justify-->
+
+    justify-content 用于如何排列 **主轴** 上的元素
+
+        justify-content:flex-start; //贴着左侧
+        justify-content:flex-end; //贴着右侧
+        justify-content:center; //居中
+
+        space-around 把空白分配到 元素两侧
+        space-evenly 把空白分配到 元素单侧
+        space-between 把空白平均分布到 元素中间，左右元素会贴边
+
+<!--Align-->
+
+    align-items 用于表示在 **辅轴** 的
+        1. 元素在辅轴上如何对齐
+        2. 元素间的关系
+
+        align-items: stretch; 把行内部所有元素的高度 设为一样， 拉伸长 矮的元素
+        align-items: flex-start; 沿着辅轴 开始边 对齐
+        flex-end 沿着辅轴 终边 对齐
+        center 沿着辅轴 居中 对齐
+        baseline 沿着文字 基线 对齐
+
+    
+    align-content 用于辅轴空白分配
+
+        center 元素上下的 空白空间 相等
+        flex-start 元素去上面
+        flext-end
+        space-end
+        space-around
+        space-between
+        space-evenly
+
+        如上，只是不根据辅轴来
+
+
+<!--弹性元素属性-->
+
+    flex-grow 默认值为 0 
+
+     当父元素有多余空间时，子元素如何伸展
+     父元素剩余空间，按照每个子元素的flex-grow的比例分配
+
+        600px的话 1的100px, 2的200px, 3的300px， 
+        600px
+        li flex-grow:1;
+        li flex-grow:2;
+        li flex-grow:3;
+            若都相同， 则用子元素安全适配剩余空间
+     
+    
+
+    flex-shrink:1;
+
+        当父元素不足容纳所有子元素时，对子元素进行收缩
+        默认值为 1 
+        为 0 是不会收缩
+        值越大，收缩越多
+
+    简写 flex-shrink / felx-basis
+
+    flex: initial; = 0 1 auto 只能减
+    flex: auto; = 1 1 auto 可增可减
+    flex none; =0 0 auto 没有弹性
+
+
+<!--order-->
+
+
+
+
+
+
+
+
