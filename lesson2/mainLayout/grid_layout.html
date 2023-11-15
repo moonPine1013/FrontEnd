@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+           start grid position 
+        */
+        .one{
+            background-color: aqua;
+        }
+        .two{
+            background-color: darkseagreen;
+        }
+        .three{
+            background-color: red;
+        }
+        p{
+            border: 2px black solid;
+        }
+        div{
+            display: grid;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+        .auto{
+            grid-template-columns: repeat(autp-fill, 100px);
+            grid-template-rows: (auto-fill, 100px);
+        }
+        .fr{
+            grid-template-columns: 1fr 1fr;
+
+        }
+        .template{
+            grid-template-columns: 100px auto 100px;
+        }
+        * {
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="one container">
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+            <p>3</p>
+            <p>3</p>
+            <p>3</p>
+        </div>
+        <div class="two auto">
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+        </div>
+        <div class="three container">
+            <p>3</p>
+        </div>
+        <div>
+            <p>4</p>
+            <p>4</p>
+            <p>4</p>
+            <p>4</p>
+            <p>4</p>
+            <p>4</p>
+        </div>
+    </div>
+</body>
+</html>
