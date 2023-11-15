@@ -5,7 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    /*
+        Media Queries
+
+        types:
+                all
+                print
+                screen
+                speech
+
+    */
+
+    /*all device*/
+    @media all{
+        body{
+            background-color: aqua;
+        }
+    }
+
+    @media print{
+
+    }
+    @media screen{
+
+    }
+    @media speech{
+
+    }
+
+    /* accept multiple types*/
+    @media screen, print{
+
+    }
+    /*rarely use only*/
+    @media only screen {
+        
+    }
+
+    /*viewport size control*/
+    @media (width:500px) {
+        /*exactly 500px*/
+        
+    }
+
+    @media (max-width:500px) {
+        
+    }
+    @media(min-width:700px),(max-width:500px){
+        /*>700px OR <500px*/
+
+    }
+    @media(max-width:700px) and (min-width:500px){
+
+    }
+    @media not screen and (max-width:700px) and (min-width:500px){
+
+    }
+
+</style>
 <body>
-    
+    <!--
+        responsive layout
+            use @media
+            Media queries
+
+        mobile-first approach,
+        Progressive enhancement
+    -->
 </body>
 </html>
