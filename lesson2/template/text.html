@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.hi{
+            width: 500px;
+            border: 1px solid green;
+            font-size: 50px;
+
+            /*
+                text-decoration:
+                none
+                undnerline
+                line-through
+                overline
+            */
+            text-decoration: line-through blueviolet;
+            /*
+                text-align:
+                left
+                right
+                center
+                justify
+            */
+            text-align: center;
+        }
+        span{
+            font-size: 20px;
+            border: 1px greenyellow solid;
+
+            /*
+                vertical-aline:
+                baseline
+                top
+                bottom
+                middle
+            */
+            vertical-align: baseline; /*attached to the bottom of the text box*/ 
+        }
+        .p{
+            border: 1px solid blueviolet; /*order doesn't matter*/
+        }
+        img{
+            /* 
+            去除图片默认的基线对齐，只要加vertical就能解决
+
+            基线是图片或者字体下多出的一条线，通过用来隔离
+            */
+            vertical-align: bottom;
+        }
+        .d{
+            /*
+            white-space:
+            normal == default new line
+            nowarp == no new line
+            pre == preserve the spac
+            */
+            white-space: nowrap;
+            width: 200px;
+            overflow: scroll;
+
+            text-overflow: ellipsis;/* 溢出的内容显示省略号,第一个空格后的文字内容全部省略 */
+        }
+    </style>
+</head>
+<body>
+    <div class="hi">The weather<span> is amazing</span>today!</div>
+    <p>
+        <img src= "spring.webp">
+    </p>
+    <div class="d">nfwenbfouqebojefbjonojjonweinpi qfgqge qegeqg    qeg qeg  qeg qegqeg  qgeqgeqejonbuoefnouqbuofbojwabijhaenjearuobnaerunoabeunobae,wgagaegr,argaa wrag awrgawrg wargarewg.</div>
+</body>
+</html>
