@@ -49,6 +49,10 @@
     <script>
         var p = document.getElementById("foo"); // find the paragraph element in the page
         p.onclick = showAlert; // Add onclick function to element
+
+        /*
+            这是一个独立写的函数
+        */
         function showAlert(Event){
             //alert("on click triggered");
             alert(Event);//这里用Event参数代替，所以在前面就需要写明 传入的信息内容是什么
