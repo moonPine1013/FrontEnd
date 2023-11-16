@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+    <script type="text/javascript">
+
+        function times(a, b){
+            return a * b;
+        }
+
+        //Array
+        var arr = ["BWM",123,true,[1,2,3],{name:"Alice", age:19}];
+
+        //Object
+        var obj = {firstname: "Sam", lastname: "Smith", arr:[1,2,3,4]};
+
+        //conversion
+        var a = "123";
+        a = Number(a);
+        console.log(a); //123
+        console.log(typeof a); //number
+
+        //如果非数字内容转数字，会返回NaN
+        //如果字符串是空格或者没东西，转换数值是0
+
+        /*
+            讲字符串中的有效整数提取，转换成Number形式
+            parseInt()
+            只会取第一次读到的整数
+            可以用来去小数点
+
+            parseFloat()
+            可以取出第一个小数点，及之后的数字
+
+            但是parseInt()对非string形式的变量改变，
+            会先变成string再操作
+        
+        */
+
+
+        // True 转数字是1
+        // False转数字是0
+        // Null 转数字也是0
+        // undefined转数字是NaN
+        var b = "120px";
+        b = parseInt(b);
+        console.log(b); // 120
+
+        var c = "49.567px"
+        c = parseFloat(c);
+        console.log(typeof c); // number
+        console.log(c); //49.567
+
+        var d = 1 + "2";
+        console.log(typeof d); // string
+        console.log(d); // 12
+
+        var e = 1 + true;
+        console.log(typeof e); // number
+        console.log(e); // 2
+
+        var f = false + "1";
+        console.log(typeof f); // string
+        console.log(f); // false1
+
+
+        //16进制数字，需要0x开头
+
+        a = 0x10;
+        a = 0xff;
+        console.log(a); // number 255
+
+        // 2进制数字，用0b开头
+        //很多浏览器不支持2进制
+        a = 0b10;
+        a = 0b10000111;
+        console.log(a); // number 135
+
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
