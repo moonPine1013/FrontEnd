@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <meta charset="utf-8"> 
+        <title>JS</title>
+
+        <!--Method1: 首先会弹出----外部script-->
+        <script src="externalFileTest.js"></script>
+
+        <!--define type-->
+        <!--如果不define，浏览器会自动识别定位-->
+        <script type="text/javascript">
+
+            //主要functions
+            alert("这是第一个JS代码弹窗"); // 2.web 中显示的第二个弹窗
+            document.write("这是一个页面内输出"); //3. 进入web后的第一行字
+            console.log("向控制台输出一个内容");
+
+            //var:变量单位
+            var str = "This is a variable";
+
+            //typeof 检查变量类型
+            console.log(typeof str);
+            var num = 120;
+
+            console.log("控制台输出");
+            var num2 = "123";
+            console.log(num);
+            console.log(num2);
+            //typeof 检查 变了类型
+            console.log(typeof num);
+            console.log(Number.MAX_VALUE);
+
+            //Infinity 正无穷
+            var a = Infinity;
+            //两个不能相乘的结果，输出为 "NaN"->number类型
+            a = a*a;
+            console.log(a);
+            console.log(typeof a);
+
+            a = NaN;
+            a = Number.MIN_VALUE;
+            console.log(a);
+
+        </script>
+
+            
+</head>
+<body>
+    <!--h1最高级别标题-->
+    <h1>This is my first web page</h1>
+    <p id="demo">This is a paragraph</p>
+    <!--再点击按钮时，会刷新-->
+    <button onclick="alert('You activate the button!Good job!');">Click Me</button>
+    <!--将JS代码写在超链接href里面-->
+    <a href="javascript:alert('This method is out-dated,think another one?');">Try to press this hyperlink!</a>
+    <!--无反应超链接-->
+    <a href="javascript:;">You click the invalid hyperlink</a>
+</body>
+</html>
