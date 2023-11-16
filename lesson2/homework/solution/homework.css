@@ -1,0 +1,54 @@
+.nevigate{
+    width: 90%;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 10px;
+
+    margin-top: 15px; /*15px away from the top of the web page*/
+    /*leave right and left spaces*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /* fixed set of 3*/
+    display: flex; /*开启弹性盒子*/
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.nevigate div{
+    font: sans-serif bold;
+    font-size: medium;
+
+    /*100% whole size of the nevigation bar / 11 number of bottoms = 9.090909...*/
+    width: 9.09%;
+    line-height: 40px;
+    border: 1px solid white;
+
+    text-align: center;
+
+}
+
+/*extended effects*/
+
+.nevigate div:hover{
+    background-color: gainsboro;
+}
+
+/*你会发现，最左边和最右边的botton的圆角效果会在hover时消失*/
+
+.nevigate .leftb:hover{
+    border-radius: 10px 0px 0px 10px; /*clock-wise*/
+}
+
+.nevigate .rightb:hover{
+    border-radius: 0px 10px 10px 0px; /*clock-wise*/
+}
+
+/*实现真正的网页跳转*/
+/*<a> 元素是锚（anchor）的缩写*/
+
+.nevigate div a{
+    text-decoration: none;
+    color: black;
+
+}
