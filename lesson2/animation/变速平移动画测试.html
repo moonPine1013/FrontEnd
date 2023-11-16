@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/reset.css">
+
+    <style>
+        .background{
+            width: 100%;
+            height: 800px;
+            background-color: violet;
+        }
+        .blackbox {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: aquamarine;
+
+            /* animation-name: test;
+
+            animation-duration: 2s; */
+            animation: test 2s infinite alternate;
+        }
+
+        @keyframes test {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="blackbox"></div>
+    </div>
+</body>
+
+</html>

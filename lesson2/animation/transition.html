@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/reset.css">
+
+    <style>
+        .box1 {
+            width: 800px;
+            height: 800px;
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        .box1 div {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+
+        .box2 {
+            background-color: violet;
+
+            transition: all 2s;
+            /* 
+            属性发生变化时的切换方式
+            通过过度效果可以创建非常好的效果，提升用户体验
+            */
+
+            /* transition-property: width, height, color; 指定要过度的属性，多个属性逗号隔开，或者all
+            transition-duration: ; 指定过度效果持续时间，单位有s秒和毫秒ms，1s=1000ms，用逗号隔开，对应property分别持续时间
+            这两个必须一起用
+
+            !!!颜色也可以过度，只有是有效数值就能过渡
+            margin和padding也可以！
+            auto不是有效数值
+
+
+            transition-timing-function: ease;过渡时间函数
+            指定过渡执行方式
+            ease是默认值，开始和结束慢，中间快
+            linear; 匀速
+            到达时间都一样
+            ease-in;慢速开始，加速运动
+            ease-out;一开始最快，减速运动
+            ease-in-out; 先加速 后减速 */
+
+            
+            transition-timing-function: cubic-bezier(0,0,1,1);
+            /* 贝塞尔曲线
+            里面四个值，从0到1，可以是负数，0到-1，负数时会往回走 */
+            transition-timing-function: steps(2);
+            /* 分布，平均距离跳跃 */
+            transition-timing-function: steps(2,start);
+            transition-timing-function: steps(2, end);
+            /* 在开始和结尾的时候执行 */
+
+
+            transition-delay: 2s;
+            /* 表过渡效果的延迟，等待相应时间后在执行 */
+
+
+            /* transition 可以直接写全部过渡效果，没有顺序要求，除了第一个时间是持续时间，第二个时间是延迟时间 */
+        }
+
+        .box1:hover .box2 {
+            width: 200px;
+            height: 200px;
+
+            background-color: blue;
+        }
+
+        .demobox{
+            margin-right: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+
+
+            /* 设置动画 */
+            /* animation-name: 对当前元素生效的关键帧名字 */
+            animation-name: test;
+
+            /* 动画持续时间 */
+            animation-duration: 5s;
+
+            /* 延迟 */
+            animation-delay: 0.5s;
+
+            /* 和过渡一样 */
+            /* animation-timing-function: ease-in-out; */
+            
+            /* 动画执行次数 */
+            animation-iteration-count: 10;
+            /* 无限次数 */
+            /* animation-iteration-count: infinite */
+
+            /* 
+            指定动画运行方向
+            normal 是一直从from 到to
+            */
+            animation-direction: normal;
+            /* animation-direction: reverse;
+            反方向
+            */
+            /* 去的还是很从from到to，回来再从to到from */
+            animation-direction: alternate;
+            /* 
+            先回来再过去
+            animation-direction: alternate-reverse; */
+
+            /* 动画停止播放，用:hover来改变来控制动画运行 */
+            /* 鼠标移入停止，移除继续移动 */
+            /* animation-play-state: paused; */
+
+
+            /* 
+            动画填充模式，默认值none
+            none表示动画执行完毕元素回到初始位置
+            和初始状态
+            
+            forwards
+            动画停止在to的位置
+
+            backwards
+            等待延迟时间的时候，就会处在开始位置
+
+            both
+            同时有forwards和backwards的两种特性
+            */
+            animation-fill-mode: forwards;
+
+            /* 简写顺序和过渡一样，
+            名字在开头最好，持续时间在前，延迟时间在后 */
+
+            animation: test 5s steps(10) alternate;
+        }
+        
+
+        /* 动画效果和过渡类似
+        但是可以自动触发，
+        设置动画效果，必须要设置一个关键帧，关键帧设置动画每一个步骤
+        */
+        @keyframes test {
+            /* from表示动画开始位置，也可以用0% */
+            /* 
+            0%{} 
+            50%{}
+            100%{}
+            可以用任意百分比设置关键帧
+            */
+
+            from{
+                margin-left: 0px;
+
+            }
+
+            50%{
+                /* 可以在某些区间调整先快后慢或者先慢后快 */
+                animation-timing-function: ease-in;
+            }
+
+            /* to动画的结束为止，也可以使用100% */
+            to{
+                margin-left: 100px;
+            }
+        }
+    </style>
+<!-- 搜spirit animation很多图
+但是要用step(3..num)
+-->
+</head>
+
+<body>
+    <div class="demobox"></div>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+
+</html>

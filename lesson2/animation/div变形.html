@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- z轴 -->
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            margin-top: 200px;
+
+            /* 
+        变形通过css改变位置或者形状
+        -不影响页面布局
+        -不脱离文档流
+        -transform用来设计变形效果
+            平移 
+            translateX() 沿x轴移动
+            translateY() 沿Y轴移动
+            translateZ() 沿Z轴移动
+        */
+            transform: translateX(100px);
+            /* 正值向左，负向右 */
+
+            /* Y
+            正向下，负向上
+            */
+
+            transform: translateX(50%);
+            /* 百分比相对自身计算 */
+
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            margin: 0 auto;
+        }
+
+        .center {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            /* 
+            满足等式自动居中
+                必须满足条件，盒子大小确定
+            */
+        }
+
+        .center2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+
+            /* 左右水平居中 */
+            left: 50%;
+            transform: translateX(-50%);
+
+            /* 垂直居中 */
+            top: 50%;
+            /* 同时设置多个效果，不需要逗号 */
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 100px;
+        }
+
+        .box3:hover {
+            transform: translateY(-10%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            transition: all 1s;
+
+
+        }
+
+
+
+
+
+        html {
+            /* 设置网页视距 */
+            perspective: 800px;
+
+            /* 给body设置颜色等于直接给html设置颜色
+            但是用border可以看清body范围，并没有整个屏幕那么大 */
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            margin: 100px;
+            /* 
+            z轴平移，朝屏幕里外移动
+            距离越大，元素离人越近，
+            反之越远
+
+            z轴属于立体效果，默认情况下，网页不支持透视
+            如果需要看见效果，必须设计网页的视距
+            */
+        }
+        .box4:hover{
+            /* Z轴向外移动 */
+            /* 值越大，离我们越近，越小越远 */
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+
+    <div class="center"></div>
+    <div class="center2"></div>
+
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>

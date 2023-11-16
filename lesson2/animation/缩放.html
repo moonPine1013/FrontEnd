@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: aqua;
+            transition: 2s;
+
+
+            /* 变形的原点 */
+            /* 默认值center */
+            transform-origin: center; 
+            transform-origin: 0px 0px;
+            transform-origin: 20px 20px;
+        }
+
+        .box:hover{
+            /* scaleX和scaleY用来放大缩小元素
+            (里面是倍率) */
+            transform: scaleX(2);
+            /* 双方向，水平垂直 */
+            transform: scale(2)
+
+            /* 
+            也有scaleZ() 
+            但是只有在3d情况下才有效果
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
