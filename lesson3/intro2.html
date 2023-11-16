@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var isTrue = true;
+        console.log(isTrue); // true
+        console.log(typeof isTrue); // boolean
+
+        //用typeof检查null值，会返回object
+
+        var c;
+        console.log(c); // undefined
+
+        //强制类型转换
+
+
+        //method1: toString()
+        //undefined, null 不能toString(),会报错
+        var num = 123;
+        console.log(num.toString()); // 123
+        var temp = num.toString();  // 用temp来存入转换后的num
+
+
+        //method2: string()
+        //可以将null, undefined换成字符串
+        var num3 = 345;
+        num3 = String(num3);
+        num3 = null;
+        num3 = String(num3);
+        num3 = undefined;
+        num3 = String(num3);
+
+        //记录日期
+        document.write(Date());//页面的第一行字：Thu Nov 16 2023 17:29:17 GMT+1100 (Australian Eastern Daylight Time)
+        var date_now = Date();
+        console.log(date_now); //控制台内一样： Thu Nov 16 2023 17:29:17 GMT+1100 (Australian Eastern Daylight Time)
+
+    </script>
+</head>
+<body>
+    <div id="demo">Hello world!</div>
+    <!--body内部插入script-->
+    <script>document.getElementById("demo").innerHTML = "newDemo";</script>
+    <button onclick="showAlert('hi you clikced the button')">Click Me</button>
+    <button id="foo" onclick="showAlert()">Try to click this one</button>
+    <script>
+        var p = document.getElementById("foo"); // find the paragraph element in the page
+        p.onclick = showAlert; // Add onclick function to element
+        function showAlert(Event){
+            alert(Event);
+        }
+    </script>
+</body>
+</html>
