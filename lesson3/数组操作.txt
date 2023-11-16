@@ -1,0 +1,227 @@
+在terminal中输入node可以直接开启JS编译器运行
+
+
+
+1.
+
+0.1在js中会有余数，不要用判定式来判断0.1相关
+
+
+2.
+Object类型可以作为list，dictionary，vector等
+包括{key:value, key1:value1}
+
+3.
+
+" "里面套''
+' '里面套""
+
+"这是一本书‘HarryPorter’好看"
+
+4.
+var x = {name:'tony', age:20, gender:'m'}
+
+x.name = 'tony'
+x.age = 20
+
+x.gender = 'm';
+
+
+5.
+const表示固定值
+const z = 1
+z无法改变
+
+
+6.
+let x = 1
+也可以用这种声明变量
+var x = 1
+且这里推荐使用let
+
+
+7.
+
+{}也称为Block Scope
+{
+    块元素
+    let x = 10; let和const是一个局部变量
+    const z = 1；
+    var y = 5; var是一个全局变量
+    出了这个块元素x和z就是undifined
+    但是y出了块元素依然能生效
+
+    建议多用let，减少代码错误
+}
+
+{
+    function()
+}
+
+8.
+function位置可以后置
+但是尽量少后置
+
+因为解析器读到函数的时候，会在代码上下文找函数位置，并且直接调用
+
+example:
+ g(会生效)
+
+g生效之后，下一行这个控制台输出也会生效，
+console.log(undeclare);
+这里就会输出undifined
+
+g();
+
+function g() {
+    let undeclare = 5;
+ }
+
+
+
+9.
+ mutable
+ const shamp = {name:"shamp", age: 22}
+
+ shamp.age = 30;
+ 在这里的是mutable是可变的
+
+
+ 10.
+ 函数声明
+normal function:普通函数
+ function isFunc(a, b){
+    return a + b;
+ }
+
+
+anonymous function:匿名函数
+let fun = function(a, b){
+     return a + b
+ }
+
+arrow function:箭头函数
+let ff = (a, b) => {
+    return a / b;
+ }
+
+
+
+ 11.
+ function big(x,y){
+     if(x>=y){
+         console.log(x);
+     }else{
+         console.log(y);
+     }
+ }
+
+
+
+12.
+array类似list，index
+
+x = [1,2,3,4,5,6]
+x[0] = 1;
+x[5] = 6;
+
+x = [1,3,5, "string", {name:'shampoo'}, false]
+
+如果
+x.length = 10;
+x = [1,3,5, "string", {name:'shampoo'}, false, <5 empty items>]
+
+y = [1,3,5, "string", {name:'shampoo'}, false]
+
+y = [1,3,5, "string", {name:'shampoo'}, false, test:"abc"]
+y.test
+会输出"abc"
+
+
+
+如果大家想对一个数组进行操作，但是想不起来关键字
+直接查
+
+x.unshift("abc", "cba")
+// unshift will add element to the start of Array,return length
+
+x.shift();
+// shift will delete the first element of Array, return shifted element
+
+x.splice(index, num, item) will start from index of Array, replace num of element to item
+
+JS的特性，可能一个函数可以接受3个参数，但是第3个参数没有传入也没关系，只要不用到
+x.splice(1, 3);
+// 1. splice(index, num) 从index开始删除num个element，返回剩下的element
+// [0,1,2,3,4,5,6] -> [0,3,4,5,6]
+
+x.splice(2, 0, "insert");
+// 2. splice(index, 0, item) 从index开始插入item进去，无返回值
+// x.splice(2, 0, "x", "x")
+// [0,1,2,3] -> [0,1,"x","x",2,3]
+
+x.splice(2, 2, "item1", "itme2");
+// 3. splice(index, num, item) 从index开始替换num个element为item，返回被替换的num个element
+// [0,1,"x","x",2,3] -> [0,1,"item1","itme2",2,3]
+
+// slice(strat_index, end_index); end_index: default = end of Array, will not change original Array
+
+x.slice(2);
+// 1. slice(strat_index) 返回Array从start_index后的Array
+// [0,1,2,3] -> [2,3]
+
+x.slice(2, 4);
+// 2. slice(strat_index, end_index) 返回 把Array从start_index到end_index之间的array
+
+x.indexof("index")
+//返回在array里面的位置，如果找不到返回-1
+
+x.sort();
+// 通过unicode-table来排列，输出排列后的数组
+// number < Upper < Lower
+！！？//
+//但是会有因为unicode的数列问题，产生不同位数的数组乱序，比如5，和12
+// 12的unicode是比5小的
+
+
+x.sort((a,b) => a - b)
+因为sort本身是一个method，但是可以被重新定义
+
+// 只适用于数字 ！！！！！！
+x.sort((a,b) => {
+    return a - b;
+})
+
+
+num1 = [1,3]
+num2 = [2]
+var num = nums1.concat(nums2);
+num = [1,3,2]
+
+
+x.length数组长度
+
+x.reverse()
+//数组从后往前排列一次
+
+
+lis = [1,2,3, t:"gw", p:"werew"]
+lis.length = 3;
+//dictionary不算在length
+
+
+
+
+
+
+数组排列
+var compare = function (x, y) {//⽐较函数
+    if (x < y) {
+        return -1;
+    } else if (x > y) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+console.log(arr.sort(compare));
