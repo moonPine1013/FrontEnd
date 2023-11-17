@@ -1,0 +1,26 @@
+.header {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    display: flex; 
+}
+
+.left-container, .right-container {
+    flex-grow: 1;
+    font: serif;
+    font-size: x-small;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.space{
+    flex-grow: 1;
+}
+
+
+.left-container div:hover, .right-container div:hover, .login{
+    color: orangered;
+}

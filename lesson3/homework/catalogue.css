@@ -1,0 +1,90 @@
+.cata{
+    width: 1050px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+
+    margin-top: 10px;
+    margin: auto;
+    margin-left: 280px;
+    
+}
+
+
+.cata>content{
+    width: 300px;
+    height: 468px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.cata>search{
+    width: 650px;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+    float: left;
+
+    margin-left: 40px;
+    margin-top: 15px;
+
+}
+
+.cata>article{
+    width: 400px;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    background-image: url(/lesson3/homework/article.png);
+    background-size:contain;
+    float: left;
+
+    margin-top: 15px;
+    margin-left: 40px;
+
+}
+
+.cata>user{
+    width: 200px;
+    height: 160px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    background-image: url(/lesson3/homework/hello.png);
+   
+    background-size:cover;
+
+    float: left;
+
+    margin-top: 40px;
+    margin-left: 40px;
+    
+}
+
+.cata>folder{
+    width: 200px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+    float: left;
+
+    margin-top: 40px;
+    margin-left: 40px;
+
+
+
+
+}
+

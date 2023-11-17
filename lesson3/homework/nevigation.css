@@ -1,0 +1,68 @@
+
+.nevi{
+    width: 60%;
+    height: 40px;
+    background-color: white;
+    border: 2px solid rgb(255, 102, 0);
+    border-radius: 20px;
+
+    margin: auto;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.leftb{
+    flex-grow: 1;
+    font: serif;
+    color: grey;
+    border-radius: 20px 0px 0px 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.rightb{
+    flex-grow: 1;
+    font: Georgia;
+    background-color:  rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.nevi input {
+    flex-grow: 8;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.nevi button {
+    height: 90%;
+    border: none;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.bottom-container{
+    width: 30%;
+    height: 30px;
+    font: serif grey;
+    font-size: x-small;
+    
+    margin: auto;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.bottom-container div:hover{
+    color: orangered;
+}
