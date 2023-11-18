@@ -1,22 +1,23 @@
 .subHeader{
     width: 80%;
     margin: auto;
+    
 }
 
 .search{
-    width: 55%;
+    width: 60%;
     height: 35px;
     border: 2px orangered solid;
     border-radius: 20px;
     background-color: white;
 
     margin: auto;
-
-
+    margin-top: 40px;
+    
 }
 
 .search_input{
-    width: 80%;
+    width: 70%;
     height: 30px;
     border: 1px solid white;
     margin-left: 5%;
@@ -25,10 +26,10 @@
 .search_button{
     float: right;
     width: 10%;
-    height: 30px;
-    background-color: orangered;
+    height: 35px;
+    background-color: rgb(255, 102, 0);
 
-    border: 1px solid white; /*和搜索条之间的间隙*/
+    border: 2px solid white; /*和搜索条之间的间隙*/
     border-radius: 20px;
     box-sizing: border-box; /*包含border高度*/
 
@@ -36,14 +37,26 @@
     color: white;
 
     text-align: center; /*水平居中*/
-    line-height: 31px; /*垂直居中*/
+    line-height: 31px; /*垂直居中 35px - 2*2px*/ 
 
+}
+
+.leftb{
+    float: left;
+    color: rgb(131, 128, 128);
+    border-radius: 20px 0px 0px 20px;
+
+    text-align: center;
+    line-height: 35px;
+
+    margin: auto;
+    margin-left: 20px;
 }
 
 .search_navi{
     margin-top: 10px;
     margin-left: 20px;
-    display: felx;
+    display: flex;
 }
 
 .search_navi a{
@@ -60,4 +73,24 @@
 
 .search_navi a:hover{
     color: red;
+}
+
+.logo{
+    width: 150px;
+    height: 110px;
+    /*!!因为logo是block element, 不设置absolute,会和搜索栏位置冲突并自动换行！！*/
+    position: absolute;
+    left: 10%;
+    top:40px;
+}
+
+.login{
+    float: right;
+    width: 91px;
+    height: 109px;
+    position:absolute;
+    left: 80%;
+    top: 50px;
+    
+
 }
