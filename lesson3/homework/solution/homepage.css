@@ -95,6 +95,70 @@
 */
 
 
+.aside_right div{
+    width: 80%;
+    height: 40%;
+    background-color: aqua;
+    background-image: url(/lesson3/homework/hello.png);
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.login_b1{
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: orangered;
+
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+
+    color: white;
+    font-size: 20px;
+    
+}
+
+.login_b2{
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: orange;
+
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+
+    color: white;
+    font-size: 20px;
+}
+
+.login_b3{
+    width: 50%;
+    height: 40px;
+    border: 3px solid orange;
+    border-radius: 20px;
+    background-color: white;
+
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+
+    color: orangered;
+    font-size: 20px;
+}
+
+.login_b1:hover, .login_b2:hover, .login_b3:hover{
+    color: rgb(59, 39, 2);
+}
+
+
+
+
 
 
 
