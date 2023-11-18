@@ -1,0 +1,63 @@
+.subHeader{
+    width: 80%;
+    margin: auto;
+}
+
+.search{
+    width: 55%;
+    height: 35px;
+    border: 2px orangered solid;
+    border-radius: 20px;
+    background-color: white;
+
+    margin: auto;
+
+
+}
+
+.search_input{
+    width: 80%;
+    height: 30px;
+    border: 1px solid white;
+    margin-left: 5%;
+}
+
+.search_button{
+    float: right;
+    width: 10%;
+    height: 30px;
+    background-color: orangered;
+
+    border: 1px solid white; /*和搜索条之间的间隙*/
+    border-radius: 20px;
+    box-sizing: border-box; /*包含border高度*/
+
+    text-decoration: none;
+    color: white;
+
+    text-align: center; /*水平居中*/
+    line-height: 31px; /*垂直居中*/
+
+}
+
+.search_navi{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: felx;
+}
+
+.search_navi a{
+    margin-right: 20px; /*各元素间隔20px*/
+    font-size: 10px;
+    
+    text-decoration: none;
+    color: rgb(91, 89, 89);
+}
+
+.search_navi .search_navi_highlight{
+    color: red;
+}
+
+.search_navi a:hover{
+    color: red;
+}
