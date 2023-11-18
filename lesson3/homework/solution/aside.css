@@ -1,0 +1,26 @@
+.myTaobao{
+    width: 100%;
+    height: 12%;
+    box-sizing: border-box;
+    border-bottom: 1px solide silver;
+
+    text-align: center;
+    line-height: 50px;
+
+}
+
+.brands{
+    width: 100%;
+    height: 88%;
+}
+
+.brands div{
+    width:  50%;
+    height: 25%; /*4rows 2columns*/
+
+    float: left;
+    text-align: center;
+    line-height: 80px;
+    box-sizing: border-box;
+    border: 1px solid silver;
+}
