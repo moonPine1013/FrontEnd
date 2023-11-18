@@ -4,7 +4,8 @@ body{
 
 .link{
     text-decoration: none;
-    color: black;
+
+    color: rgb(47, 44, 44);
 }
 
 .link_red{
@@ -38,10 +39,10 @@ header>div{
 }
 
 .headerLeft div{
-    margin-right: 10px; /*ele1 (10px rightspace) ele2*/
+    margin-right: 20px; /*ele1 (10px rightspace) ele2*/
 }
 .headerRight div{
-    margin-left: 10px; /*ele2 (10px leftspace) ele1*/
+    margin-left: 20px; /*ele2 (10px leftspace) ele1*/
 }
 
 .header_login .link_red {
