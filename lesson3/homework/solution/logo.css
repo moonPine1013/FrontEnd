@@ -12,7 +12,7 @@
     background-color: white;
 
     margin: auto;
-    margin-top: 40px;
+    margin-top: 45px;
     
 }
 
@@ -54,14 +54,14 @@
 }
 
 .search_navi{
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 20px;
     display: flex;
 }
 
 .search_navi a{
     margin-right: 20px; /*各元素间隔20px*/
-    font-size: 10px;
+    font-size: 12px;
     
     text-decoration: none;
     color: rgb(91, 89, 89);
@@ -80,8 +80,8 @@
     height: 110px;
     /*!!因为logo是block element, 不设置absolute,会和搜索栏位置冲突并自动换行！！*/
     position: absolute;
-    left: 10%;
-    top:40px;
+    left: 12%;
+    top: 45px;
 }
 
 .login{
@@ -91,6 +91,5 @@
     position:absolute;
     left: 80%;
     top: 50px;
-    
 
 }

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/lesson3/homework/solution/navi.css">
     <link rel="stylesheet" href="/lesson2/resource/css/all.css">
 
-
 </head>
 <body>
 
@@ -53,7 +52,7 @@
             <a class="search_button" href="">搜索</a>
 
             <div class="search_navi">
-                <a class="search_navi_highlight">聚划算</a>
+                <a class="search_navi_highlight" href="">聚划算</a>
                 <a href="">咖啡</a>
                 <a href="">四件套</a>
                 <a href="">墙纸</a>
@@ -64,6 +63,68 @@
         </div>
         <img src="/lesson3/homework/QR.png" alt="" class="login">
     </div>
+
+    <main class="container">
+        <aside class="aside_left">
+            <div>分类</div>
+            <div class="list">
+                <i class="fa-solid fa-person-dress" style="color: #999999;"></i>
+                <a href="">女装</a>
+                <a>/</a>
+                <a href="">内衣</a>
+                <a>/</a>
+                <a href="">奢品</a>
+            </div>
+            <div class="list">
+                <i class="fa-solid fa-shoe-prints" style="color: #8f8f8f;"></i>
+                <a href="">女鞋</a>
+                <a>/</a>
+                <a href="">男鞋</a>
+                <a>/</a>
+                <a href="">箱包</a>
+            </div>
+            <div class="list">
+                <i class="fa-solid fa-holly-berry" style="color: #949494;"></i>
+                <a href="">美妆</a>
+                <a>/</a>
+                <a href="">饰品</a>
+                <a>/</a>
+                <a href="">洗护</a>
+            </div>
+            <div class="list">
+                <i class="fa-solid fa-couch" style="color: #949599;"></i>
+                <a href="">家装</a>
+                <a>/</a>
+                <a href="">电器</a>
+                <a>/</a>
+                <a href="">车品</a>
+            </div>
+        </aside>
+        <div class="middle">
+            <button class="left_button" onclick="change_backwards()"> < </button>
+            <button class="right_button" onclick="change_forwards()">></button>
+        </div>
+        <aside class="aside_right"></aside>
+    </main>
+
+    <!--实现change_back/forward()-->
+    <script>
+        var mid = document.querySelector(".middle");
+        var index = 0;
+
+        function change_forwards() {
+            index++;
+            mid.style.backgroundPosition = index * 47 + "% 0px";
+        }
+
+        function change_backwards() {
+            index--;
+            mid.style.backgroundPosition = index * 47 + "% 0px";
+        }
+    </script>
+    
+    
+
     
 </body>
 </html>

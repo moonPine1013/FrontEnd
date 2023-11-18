@@ -1,0 +1,112 @@
+.container{
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+
+    margin: auto;
+    margin-top: 50px;
+
+    /*三个containers水平布局*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.aside_left, .aside_right{
+    width: 22%;
+    height: 450px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+    overflow: hidden;/*防止元素溢出*/
+}
+
+
+.aside_left>div{
+    height: 20%;
+    width: 100%;
+
+    border: 2px solid white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.aside_left>div:hover{
+    background-color: rgb(243, 235, 232);
+    border-radius: 10px;
+}
+
+.list a{
+    text-decoration: none;
+    color: grey;
+
+}
+
+.aside_left>div:hover a{
+    color: orangered;
+    font-weight: 560;
+    font-style: italic;
+}
+
+
+
+.middle{
+    width: 45%;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+    overflow: hidden;/*防止元素溢出*/
+
+    background-image: url(/lesson3/homework/solution/slideshow.jpg);
+    background-size:cover;
+    background-repeat: repeat;
+    /*transition effect*/
+    transition: all 2s;
+    background-position: 0px 0px;
+}
+
+.left_button, .right_button{
+    /*隐藏原本处于左上角的button*/
+    opacity: 0%;
+}
+.middle:hover .left_button{
+
+    float: left;
+    opacity: 30%;
+    margin-top: 30%;
+}
+
+.middle:hover .right_button{
+
+    float: right;
+    opacity: 30%;
+    margin-top: 30%;
+}
+
+/*
+    动态点击切图效果在html script 函数实现
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
