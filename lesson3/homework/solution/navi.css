@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.link_red{
+    text-decoration: none;
+    color: red;
+}
+
+header{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+header>div{
+    width: 80%;
+    line-height: 30px;
+    margin: auto;
+}
+
+.headerLeft, .headerLeft div{
+    float: left;
+    line-height: 30px; /*20px +10px*/
+    font-size: 10px;
+}
+
+.headerRight, .headerRight div{
+    float: right;
+    line-height: 30px;
+    font-size: 10px;
+}
+
+.headerLeft div{
+    margin-right: 10px; /*ele1 (10px rightspace) ele2*/
+}
+.headerRight div{
+    margin-left: 10px; /*ele2 (10px leftspace) ele1*/
+}
+
+.header_login .link_red {
+    margin-right: 3px;
+}
+
+.link:hover{
+    color: red;
+}
