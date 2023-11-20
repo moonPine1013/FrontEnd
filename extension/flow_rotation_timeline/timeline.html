@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline</title>
+    <style>
+        /* define global varaible */
+        :root{
+            --rotate-speed:40;
+            --count:8;
+            --easing:cubic-bezier(0.000,0.37,1.000,0.63);
+        }
+        /*website style design*/
+        body{
+            margin: 0;
+            height: 100vh; /*fit in the whole web page*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*container style design*/
+        .void{
+            width: 100%;
+            max-width: 1024px;
+            margin: auto;
+            position: relative;
+            aspect-ratio: 1/1;
+        }
+        /*hover animation*/
+        ul:hover *{
+            animation-play-state: paused;
+        }
+        /*list style design*/
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            z-index: 1;
+            
+        }
+        /*list item style design*/
+        li {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            animation: rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+        }
+        /*card style design*/
+        .card{
+            width: 27%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px 24px;
+            gap: 8px;
+            background-color: whitesmoke;
+            box-shadow: 0px 20px 12px rgba(7, 2, 24, 0.1), 0px 16px 32px rgba(36, 7, 74, 0.1);
+            border-radius: 12px;
+            font: 400 14px '';
+            color: #5f5b74;
+            animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+        }
+        /*image style design*/
+        .card img{
+            width: 100%;
+            opacity: 60%;
+
+    
+        }
+        /*link style design*/
+        a{
+            text-decoration: none;
+            color: unset;
+            display: block;
+            height: 80px;
+            overflow: hidden;
+        }
+        /*model name style design*/
+        .model-name{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            color: #3B2ED0;
+            display: block;
+        }
+        /*SVG style design*/
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        /*each animation delay style design*/
+        /* each animation delay style design */
+        li:nth-child(1),
+        li:nth-child(1) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * 0s);
+        }
+
+        li:nth-child(2),
+        li:nth-child(2) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * -1s);
+        }
+
+        li:nth-child(3),
+        li:nth-child(3) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * -2s);
+        }
+
+        li:nth-child(4),
+        li:nth-child(4) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * -3s);
+        }
+
+        li:nth-child(5),
+        li:nth-child(5) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * -4s);
+        }
+
+        li:nth-child(6),
+        li:nth-child(6) .card {
+            animation-delay: calc((var(--rotate-speed) / var(--count)) * -5s);
+        }
+
+        /*clock-wise rotation*/
+        @keyframes rotateCW{
+            from{
+                transform: translate3d(0px,-50%,0px) rotate(-45deg);
+            }
+            to{
+                transform: translate3d(0px,-50%,0px) rotate(-315deg);
+            }
+        }
+        /*anticlock-wise rotation*/
+        @keyframes rotateCCW{
+            from{
+                transform: rotate(45deg);
+            }
+            to{
+                transform: rotate(315deg);
+            }
+        }
+        /*inner circle style design*/
+        .center-circle{
+            position: absolute;
+            width: 200px;
+            aspect-ratio: 1/1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(270deg);
+            background-image: url(./themegolden.GIF);
+            background-size: cover;
+            box-shadow: 0px 18px 36px -18px rgba(12,5,46,0.3), 0px 30px 60px -12px rgba(12,5,46,0.25);
+            border-radius: 50%;
+
+        }
+        /*middle circle style design*/
+        .second-circle{
+            position: absolute;
+            width: 40%;
+            aspect-ratio: 1/1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:red;
+            box-shadow: 0px 18px 36px -18px rgba(12,5,46,0.3), 0px 30px 60px -12px rgba(12,5,46,0.25);
+            border-radius: 50%;
+            opacity: 0.7;
+            background-image: url(./themegrey.GIF);
+            background-size: cover;
+        }
+        /*outer circle style design*/
+        .last-circle{
+            position: absolute;
+            width: 66%;
+            aspect-ratio: 1/1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:red;
+            box-shadow: 0px 18px 36px -18px rgba(12,5,46,0.3), 0px 30px 60px -12px rgba(12,5,46,0.25);
+            border-radius: 50%;
+            opacity: 0.3;
+            background-image: url(./themegrey.GIF);
+            background-size: cover;
+        }
+        /*crop style design*/
+        .crop{
+            -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0),rgba(0,0,0,0) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1));
+        }
+        /*mask style design*/
+        .mask {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            background-position: 100% 50%;
+            background-repeat: no-repeat;
+            background-image: radial-gradient(100% 50% at 100% 50%, 
+                rgba(89, 59, 187, 0.25) 0%, 
+                rgba(101, 98, 105, 0.221) 20%, 
+                rgba(202, 202, 127, 0.157) 40%, 
+                rgba(203, 138, 46, 0.104) 60%, 
+                rgba(219, 229, 26, 0.011) 90%, 
+                rgba(229, 219, 26, 0) 100%
+            );
+        }
+
+
+        .mask:after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            right: 0;
+            display: block;
+            background-image: linear-gradient(180deg, rgba(239, 233, 229, 0)0%
+                ,#525355 50%, rgba(186, 128, 34, 0)100%);
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="void" id="void">
+        <div class="crop">
+            <ul class="card-list" style="--count:6">
+                <li>
+                    <div class="card"><a href="">
+                        <span>2020-2024</span>
+                        <span>demo for designing a board gameeeeeeeeeeeeee</span>
+                    </a></div>
+                </li>
+                <li>
+                    <div class="card"><a href="">
+                        <img src="themegrey.GIF" alt="">
+                    </a></div>
+                </li>
+
+                <li>
+                    <div class="card"><a href="">
+                        <span>2020-2024</span>
+                        <span>demo for designing a board gameeeeeeeeeeee</span>
+                    </a></div>
+                </li>
+                <li>
+                    <div class="card"><a href="">
+                        <img src="themegrey.GIF" alt="">
+                    </a></div>
+                </li>
+
+                <li>
+                    <div class="card"><a href="">
+                        <span>2020-2024</span>
+                        <span>demo for designing a board gameeeeeeeeeeeeeee</span>
+                    </a></div>
+                </li>
+                <li>
+                    <div class="card"><a href="">
+                        <img src="themegrey.GIF" alt="">
+                    </a></div>
+                </li>
+            </ul>
+            <div class="last-circle"></div>
+            <div class="second-circle"></div>
+        </div>
+        <div class="mask"></div>
+        <div class="center-circle"></div>
+        
+    </div>
+</body>
+</html>
